@@ -1,0 +1,96 @@
+----------------------------------------------------
+HACKATHON EXPERIENCES
+----------------------------------------------------
+
+Heading:
+
+Hackathon Journey
+
+Subheading:
+
+Learning, collaborating, and building innovative solutions through competitive hackathons.
+
+Display each experience inside premium glassmorphism cards with timelines and image galleries.
+
+----------------------------------------------------
+
+Hack'O'Clock 2026
+KLE Institute of Technology
+
+Achievement:
+🏆 Top 8 Finalist Team
+
+Description:
+
+Participated in an 18-hour national hackathon where our team developed innovative solutions under time constraints. Collaborated with teammates, solved real-world problems, and gained valuable experience in teamwork and rapid product development.
+
+Features:
+
+• Team collaboration
+• Problem solving
+• Rapid prototyping
+• Pitch presentation
+
+Allow adding multiple event images later.
+
+----------------------------------------------------
+
+HackArena 2026
+Jain College of Engineering and Technology
+
+Achievement:
+🏆 Finalist Team
+
+Description:
+
+Worked on innovative ideas and competed among multiple teams. Improved technical skills and learned how to build solutions under deadlines.
+
+Allow image uploads later.
+
+----------------------------------------------------
+
+HackFusion
+AGM College, Varur
+
+Achievement:
+🎖 Participant
+
+Description:
+
+Participated in a collaborative hackathon focused on creativity, innovation, and practical problem-solving.
+
+Allow image uploads later.
+
+----------------------------------------------------
+
+AI Prompt Battle
+
+Achievement:
+🏆 Final Round
+
+Description:
+
+Competed in AI prompting challenges and reached the final round, demonstrating creativity and problem-solving skills using generative AI.
+
+Allow image uploads later.
+
+----------------------------------------------------
+
+Gallery Features:
+
+- Masonry image gallery
+- Click image to open lightbox modal
+- Smooth zoom animation
+- Horizontal carousel on mobile
+- Lazy loading images
+- Support adding photos later from local folder
+
+Folder structure:
+
+/public/hackathons/
+    hackoclock/
+    hackarena/
+    hackfusion/
+    promptbattle/
+
+Automatically load all images from each folder.

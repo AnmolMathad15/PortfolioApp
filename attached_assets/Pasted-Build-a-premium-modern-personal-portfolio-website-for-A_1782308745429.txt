@@ -1,0 +1,476 @@
+Build a premium modern personal portfolio website for "Anmol Mathad".
+
+STYLE:
+- Dark theme only.
+- Main color palette:
+  Background: #050816
+  Card background: #0B1120
+  Neon Blue: #3B82F6
+  Glow Blue: #60A5FA
+  Accent Purple: #8B5CF6
+  Text: White
+  Secondary text: #94A3B8
+
+Design inspiration:
+- Vercel
+- Linear
+- Apple
+- Stripe
+- Modern SaaS websites
+
+Use:
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React Icons
+
+Add:
+- Smooth scrolling
+- Mouse glow effect
+- Glassmorphism cards
+- Blur effects
+- Animated gradient backgrounds
+- Hover animations
+- Reveal on scroll animations
+- Professional doodles around hero image
+- Neon blue glowing effects
+- Floating navbar
+- Responsive mobile design
+
+----------------------------------------------------
+NAVBAR
+----------------------------------------------------
+
+Logo text:
+
+AM
+
+Menu:
+
+Home
+About
+Skills
+Projects
+Experience
+Education
+Achievements
+Contact
+
+Right side button:
+
+Download Resume
+
+Navbar should blur while scrolling.
+
+----------------------------------------------------
+HERO SECTION
+----------------------------------------------------
+
+Split layout.
+
+LEFT SIDE:
+
+Small badge:
+
+👋 Hello, I'm
+
+Large heading:
+
+ANMOL
+MATHAD
+
+Subtitle:
+
+Computer Science Engineer |
+Full Stack Developer |
+UI/UX Designer |
+AI Application Enthusiast
+
+Description:
+
+I am passionate about creating engaging and user-friendly interfaces, designing prototypes, and developing scalable solutions that solve real-world problems.
+
+Buttons:
+
+Explore My Work
+Let's Connect
+
+Social Icons:
+
+GitHub
+LinkedIn
+Instagram
+Email
+
+RIGHT SIDE:
+
+Large professional image of Anmol with:
+
+- Neon circular glow behind image
+- Floating doodles:
+  </code>
+  light bulb
+  laptop
+  UI wireframe
+  curly brackets
+  Code Create Repeat text
+
+Use subtle animations.
+
+----------------------------------------------------
+ABOUT ME SECTION
+----------------------------------------------------
+
+Glass card layout.
+
+Left side:
+
+About Me paragraph:
+
+I am a Computer Science Engineering student passionate about Full Stack Development, Artificial Intelligence applications, and UI/UX design.
+
+I enjoy building modern web applications, exploring AI technologies, and designing seamless user experiences. I am always eager to learn new technologies and create impactful digital products.
+
+Signature style text:
+
+Anmol Mathad
+
+Right side stats cards:
+
+CGPA
+8.39
+
+Projects
+7+
+
+Internships
+2
+
+Hackathons
+3+
+
+Animate counters.
+
+----------------------------------------------------
+SKILLS SECTION
+----------------------------------------------------
+
+Create separate glowing cards.
+
+LANGUAGES
+Java
+Python
+C
+JavaScript
+TypeScript
+
+FRONTEND
+HTML
+CSS
+Bootstrap
+Tailwind CSS
+React
+
+BACKEND
+Node.js
+Express.js
+Spring Boot
+
+DATABASES
+MySQL
+PostgreSQL
+
+AI / ML
+PyTorch
+Hugging Face
+YOLOv8
+
+TOOLS & PLATFORMS
+Git
+GitHub
+Postman
+VS Code
+Docker
+XAMPP
+Google Colab
+LaTeX
+Figma
+Canva
+
+CORE CS CONCEPTS
+Object Oriented Programming
+Data Structures
+DBMS
+
+Add hover glow effect.
+
+----------------------------------------------------
+PROJECTS SECTION
+----------------------------------------------------
+
+Create premium project cards.
+
+When clicking a project card, open a modal with full details.
+
+PROJECT 1
+
+NextStop JGI
+Real-Time Bus Tracking Platform
+
+Tech:
+React
+TypeScript
+Node.js
+WebSockets
+
+Description:
+
+Built a real-time bus tracking system with live location updates and role-based dashboards for students, drivers, and administrators.
+
+----------------------------------------------------
+
+PROJECT 2
+
+ResolveAI
+AI Customer Complaint Resolution Agent
+
+Tech:
+FastAPI
+Next.js
+PostgreSQL
+Hugging Face
+
+Description:
+
+Built an AI-powered complaint resolution platform using NLP models for sentiment analysis and complaint classification.
+
+----------------------------------------------------
+
+PROJECT 3
+
+NeuroVisionAI
+Real-Time Object Detection System
+
+Tech:
+Python
+PyTorch
+YOLOv8
+
+Description:
+
+Developed a real-time object detection system trained using the COCO dataset on Google Colab GPU.
+
+----------------------------------------------------
+
+PROJECT 4
+
+JCET Hub
+Smart Campus Management Platform
+
+Tech:
+Node.js
+Express.js
+PostgreSQL
+WebSockets
+
+Description:
+
+Built a smart campus platform with attendance management, event handling and role-based dashboards.
+
+----------------------------------------------------
+
+PROJECT 5
+
+CodeInsight
+AI Code Review Platform
+
+Tech:
+JavaScript
+AI Integration
+
+Description:
+
+Built an AI-powered code review system with AutoFix and multimodal debugging support.
+
+----------------------------------------------------
+EXPERIENCE SECTION
+----------------------------------------------------
+
+Timeline cards.
+
+COMPANY 1
+
+StudyEcart Technologies Pvt Ltd
+
+Show company logo.
+
+Role:
+
+Java Full Stack Developer Intern
+
+Location:
+
+Remote
+
+Duration:
+
+June 2026 – Present
+
+Tech Stack:
+
+Java
+Spring Boot
+React
+JavaScript
+Node.js
+Bootstrap
+MySQL
+Postman
+Git
+VS Code
+XAMPP
+
+Responsibilities:
+
+Working in a live industry internship environment with collaborative workflows.
+
+Developing applications using Java, Spring Boot, React and Node.js.
+
+Testing APIs with Postman.
+
+Using MySQL databases.
+
+Add external company link:
+
+https://www.studyecart.in
+
+----------------------------------------------------
+
+COMPANY 2
+
+FlyRank AI
+
+Show logo.
+
+Role:
+
+Frontend AI Engineer
+
+Responsibilities:
+
+Worked on AI-powered frontend experiences and modern UI systems.
+
+Add external link:
+
+https://flyrank.ai
+
+----------------------------------------------------
+EDUCATION SECTION
+----------------------------------------------------
+
+Timeline style.
+
+Jain College of Engineering and Technology (VTU)
+
+2023 - 2027
+
+Bachelor of Engineering in Computer Science and Engineering
+
+CGPA: 8.39
+
+----------------------------------------------------
+
+KLE Prerana Residential College
+
+2021 - 2023
+
+Higher Secondary Education
+
+Percentage: 91.7%
+
+----------------------------------------------------
+ACHIEVEMENTS SECTION
+----------------------------------------------------
+
+Cards:
+
+🏆 Top 8 Finalist
+Hack'O'Clock 2026
+
+🏆 Finalist
+HackArena 2026
+
+🏆 Participant
+HackFusion AGM College
+
+🏆 Final Round
+AI Prompt Battle
+
+----------------------------------------------------
+CERTIFICATIONS SECTION
+----------------------------------------------------
+
+Create image carousel for certificates.
+
+NPTEL
+
+IBM SkillsBuild
+
+LinkedIn Learning
+
+Anthropic Claude
+
+Forage Virtual Experience Programs
+
+Allow adding images later.
+
+----------------------------------------------------
+HACKATHON GALLERY
+----------------------------------------------------
+
+Image gallery section.
+
+Allow uploading hackathon images later.
+
+----------------------------------------------------
+CONTACT SECTION
+----------------------------------------------------
+
+Heading:
+
+Let's Connect
+
+Text:
+
+I'm always open to discussing opportunities, collaborations, internships, or just having a tech conversation.
+
+Cards:
+
+Email:
+anmolmathad@gmail.com
+
+LinkedIn:
+linkedin.com/in/anmolmathad
+
+GitHub:
+github.com/anmol-mathad
+
+Instagram:
+life_of_anmol
+
+Buttons:
+
+Download Resume
+Send Email
+
+----------------------------------------------------
+FOOTER
+----------------------------------------------------
+
+© 2026 Anmol Mathad.
+Built with Next.js + TypeScript + Tailwind CSS.
+
+Add animated text:
+
+Let's build something amazing together 🚀
