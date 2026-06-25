@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { Code2, Lightbulb, Laptop, LayoutTemplate } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import anmolPhoto from "@assets/111_1782308842318.png";
+import anmolPhoto from "@assets/WhatsApp_Image_2026-02-28_at_10.13.00_AM_1782387184550.jpeg";
 
 const ROLES = [
   "Computer Science Engineer",
