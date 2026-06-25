@@ -8,6 +8,15 @@ import nextstopRoutes from "@assets/Screenshot_2026-06-25_173842_1782389493992.p
 import nextstopMap from "@assets/Screenshot_2026-06-25_173914_1782389493991.png";
 import nextstopAlerts from "@assets/Screenshot_2026-06-25_173958_1782389476090.png";
 
+import resolveReadme from "@assets/image_1782389706147.png";
+import resolveLanding from "@assets/Screenshot_2026-06-25_174424_1782389721206.png";
+import resolvePortal from "@assets/Screenshot_2026-06-25_174546_1782390118352.png";
+import resolveChat from "@assets/Screenshot_2026-06-25_174836_1782390118351.png";
+import resolveCustomers from "@assets/Screenshot_2026-06-25_174906_1782390118349.png";
+import resolveComplaints from "@assets/Screenshot_2026-06-25_174922_1782390118349.png";
+import resolveAnalyze from "@assets/Screenshot_2026-06-25_175009_1782390118347.png";
+import resolveDashboard from "@assets/Screenshot_2026-06-25_175045_1782390101136.png";
+
 const PROJECTS = [
   {
     title: "NextStop JGI",
@@ -23,13 +32,13 @@ const PROJECTS = [
   {
     title: "ResolveAI",
     subtitle: "AI Customer Complaint Resolution Agent",
-    tech: ["FastAPI", "Next.js", "PostgreSQL", "Hugging Face"],
+    tech: ["FastAPI", "Next.js", "PostgreSQL", "Hugging Face", "Python", "Redis"],
     description: "Built an AI-powered complaint resolution platform using NLP models for sentiment analysis and complaint classification.",
-    fullDescription: "ResolveAI streamlines customer support by automatically triaging incoming tickets. Leveraging custom-tuned Hugging Face models, it performs sentiment analysis to prioritize angry customers and categorizes complaints to route them to the correct department. The Next.js dashboard provides support agents with AI-generated suggested responses.",
-    images: [],
-    imageLabels: [],
+    fullDescription: "ResolveAI streamlines customer support by automatically triaging incoming tickets. Leveraging custom-tuned Hugging Face models (BART, RoBERTa), it performs zero-shot complaint classification and real-time sentiment analysis to prioritize critical cases. A policy engine generates explainable, confidence-scored resolutions and auto-escalates to human agents when needed. Built for Hack'O'Clock 2026.",
+    images: [resolveLanding, resolvePortal, resolveChat, resolveComplaints, resolveCustomers, resolveAnalyze, resolveDashboard, resolveReadme],
+    imageLabels: ["Landing Page", "Customer Portal", "Submit Complaint", "Complaint Log", "Customers", "AI Analysis", "Dashboard", "README"],
     link: "#",
-    github: "#",
+    github: "https://github.com/AnmolMathad15/AICustomerComplaintResolutionAgent-ResolveAI-Hackoclock",
   },
   {
     title: "NeuroVisionAI",
