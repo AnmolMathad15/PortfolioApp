@@ -13,17 +13,38 @@ import hackGoodies from "@assets/h6_1782391890500.jpg";
 import hackCertPaper from "@assets/h8_1782391890499.jpg";
 import hackTeams from "@assets/h9_1782391890497.jpg";
 
-const HACKATHON_GALLERY = [
-  { src: hackGroup, label: "All Participants — Hack'O'Clock 2026" },
-  { src: hackTeam, label: "Team Backend Brains" },
-  { src: hackPitch, label: "Problem Statement Presentation" },
-  { src: hackTeams, label: "Top 8 Finalist Teams Revealed" },
-  { src: hackAudience, label: "Judging Panel & Audience" },
-  { src: hackSpeaker, label: "Opening Ceremony" },
-  { src: hackCert, label: "Certificate of Participation" },
-  { src: hackCertPaper, label: "Advitiya-26 Certificate" },
-  { src: hackGoodies, label: "Event Goodies & Certificate" },
-];
+import apbBadge from "@assets/j1_1782392102547.jpg";
+import apbRoom from "@assets/j2_1782392102546.jpg";
+import apbLaptop from "@assets/j3_1782392102544.jpg";
+import apbEval from "@assets/j4_1782392102543.jpg";
+import apbTeam from "@assets/j5_1782392102542.jpg";
+import apbCert from "@assets/j6_1782392102541.jpg";
+import apbAward from "@assets/j7_1782392102540.jpg";
+
+type GalleryPhoto = { src: string; label: string };
+
+const GALLERIES: Record<string, GalleryPhoto[]> = {
+  "Hack'O'Clock 2026": [
+    { src: hackGroup, label: "All Participants — Hack'O'Clock 2026" },
+    { src: hackTeam, label: "Team Backend Brains" },
+    { src: hackPitch, label: "Problem Statement Presentation" },
+    { src: hackTeams, label: "Top 8 Finalist Teams Revealed" },
+    { src: hackAudience, label: "Judging Panel & Audience" },
+    { src: hackSpeaker, label: "Opening Ceremony" },
+    { src: hackCert, label: "Certificate of Participation" },
+    { src: hackCertPaper, label: "Advitiya-26 Certificate" },
+    { src: hackGoodies, label: "Event Goodies & Certificate" },
+  ],
+  "AI Prompt Battle 2026": [
+    { src: apbBadge, label: "Team Badge — A4 Backbenchers (PB009)" },
+    { src: apbLaptop, label: "Live Prompting Session" },
+    { src: apbRoom, label: "Competition Hall" },
+    { src: apbEval, label: "Evaluation Round — Judges Visiting Teams" },
+    { src: apbTeam, label: "Team A4 Backbenchers" },
+    { src: apbCert, label: "Certificate of Participation" },
+    { src: apbAward, label: "Award Ceremony — Vaibhav Fest" },
+  ],
+};
 
 const HACKATHONS = [
   {
@@ -32,7 +53,13 @@ const HACKATHONS = [
     achievement: "Top 8 Finalist Team",
     description: "Participated in an 18-hour national hackathon at Advitiya-26 where our team (Backend Brains) built ResolveAI — an AI-powered customer complaint resolution agent. Reached Top 8 Finalist teams out of all participants.",
     features: ["Team collaboration", "Problem solving", "Rapid prototyping", "Pitch presentation"],
-    hasGallery: true,
+  },
+  {
+    title: "AI Prompt Battle 2026",
+    organization: "Jain College of Engineering and Technology",
+    achievement: "Final Round",
+    description: "Led team 'A4 Backbenchers' (PB009) at JCET's AI Prompt Battle 2026 — a live AI prompting competition held during the Vaibhav Tech Fest. Competed through evaluation rounds with judges and reached the Final Round.",
+    features: ["Prompt Engineering", "AI Interaction", "Creative Thinking", "Team Leadership"],
   },
   {
     title: "HackArena 2026",
@@ -40,7 +67,6 @@ const HACKATHONS = [
     achievement: "Finalist Team",
     description: "Worked on innovative ideas and competed among multiple teams. Improved technical skills.",
     features: ["Innovation", "Technical Execution", "Teamwork"],
-    hasGallery: false,
   },
   {
     title: "HackFusion",
@@ -48,24 +74,18 @@ const HACKATHONS = [
     achievement: "Participant",
     description: "Participated in a collaborative hackathon focused on creativity, innovation, and practical problem-solving.",
     features: ["Creativity", "Practical Solutions", "Collaboration"],
-    hasGallery: false,
-  },
-  {
-    title: "AI Prompt Battle",
-    organization: "Tech Symposium",
-    achievement: "Final Round",
-    description: "Competed in AI prompting challenges and reached the final round.",
-    features: ["Prompt Engineering", "AI Interaction", "Creative Thinking"],
-    hasGallery: false,
   },
 ];
 
 export function Hackathons() {
-  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [activeGallery, setActiveGallery] = useState<string | null>(null);
   const [currentPhoto, setCurrentPhoto] = useState(0);
 
-  const prevPhoto = () => setCurrentPhoto((c) => (c - 1 + HACKATHON_GALLERY.length) % HACKATHON_GALLERY.length);
-  const nextPhoto = () => setCurrentPhoto((c) => (c + 1) % HACKATHON_GALLERY.length);
+  const gallery: GalleryPhoto[] = activeGallery ? (GALLERIES[activeGallery] ?? []) : [];
+  const prevPhoto = () => setCurrentPhoto((c) => (c - 1 + gallery.length) % gallery.length);
+  const nextPhoto = () => setCurrentPhoto((c) => (c + 1) % gallery.length);
+  const openGallery = (title: string) => { setActiveGallery(title); setCurrentPhoto(0); };
+  const closeGallery = () => { setActiveGallery(null); setCurrentPhoto(0); };
 
   return (
     <section id="hackathons" className="py-24 relative w-full">
@@ -94,120 +114,122 @@ export function Hackathons() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {HACKATHONS.map((h, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="glass-card rounded-2xl overflow-hidden flex flex-col group"
-              data-testid={`card-hackathon-${index}`}
-            >
-              <div className="p-6 md:p-8 flex-1">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">
-                      {h.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mt-1">{h.organization}</p>
-                  </div>
-                  <span
-                    className="inline-flex px-4 py-1.5 text-sm font-semibold rounded-full shrink-0"
-                    style={{
-                      background: "rgba(0,200,255,0.08)",
-                      border: "1px solid rgba(0,200,255,0.2)",
-                      color: "#00C8FF",
-                    }}
-                  >
-                    {h.achievement}
-                  </span>
-                </div>
+          {HACKATHONS.map((h, index) => {
+            const photos = GALLERIES[h.title] ?? [];
+            const hasGallery = photos.length > 0;
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">{h.description}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {h.features.map((feature, i) => (
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="glass-card rounded-2xl overflow-hidden flex flex-col group"
+              >
+                <div className="p-6 md:p-8 flex-1">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">
+                        {h.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mt-1">{h.organization}</p>
+                    </div>
                     <span
-                      key={i}
-                      className="text-xs px-3 py-1.5 rounded-lg"
+                      className="inline-flex px-4 py-1.5 text-sm font-semibold rounded-full shrink-0"
                       style={{
-                        background: "rgba(0,200,255,0.05)",
-                        border: "1px solid rgba(0,200,255,0.1)",
-                        color: "#94a3b8",
-                      }}
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Gallery strip */}
-              {h.hasGallery ? (
-                <div
-                  onClick={() => { setCurrentPhoto(0); setGalleryOpen(true); }}
-                  className="cursor-pointer relative overflow-hidden group/gallery"
-                  style={{ height: "120px", borderTop: "1px solid rgba(0,200,255,0.1)" }}
-                >
-                  {/* Thumbnail strip from real photos */}
-                  <div className="absolute inset-0 flex">
-                    {HACKATHON_GALLERY.slice(0, 4).map((photo, i) => (
-                      <div key={i} className="flex-1 overflow-hidden relative">
-                        <img
-                          src={photo.src}
-                          alt={photo.label}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover/gallery:scale-105"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  {/* Overlay */}
-                  <div
-                    className="absolute inset-0 flex flex-col items-center justify-center transition-all duration-300"
-                    style={{ background: "rgba(5,8,22,0.55)", backdropFilter: "blur(2px)" }}
-                  >
-                    <div
-                      className="p-2.5 rounded-full mb-1.5 transition-transform duration-300 group-hover/gallery:scale-110"
-                      style={{
-                        background: "rgba(0,200,255,0.15)",
-                        border: "1px solid rgba(0,200,255,0.35)",
+                        background: "rgba(0,200,255,0.08)",
+                        border: "1px solid rgba(0,200,255,0.2)",
                         color: "#00C8FF",
                       }}
                     >
-                      <ImageIcon size={18} />
-                    </div>
-                    <span
-                      className="text-xs font-semibold"
-                      style={{ color: "#00C8FF", textShadow: "0 0 8px rgba(0,200,255,0.4)" }}
-                    >
-                      View {HACKATHON_GALLERY.length} Photos
+                      {h.achievement}
                     </span>
                   </div>
+
+                  <p className="text-muted-foreground mb-6 leading-relaxed">{h.description}</p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {h.features.map((feature, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-3 py-1.5 rounded-lg"
+                        style={{
+                          background: "rgba(0,200,255,0.05)",
+                          border: "1px solid rgba(0,200,255,0.1)",
+                          color: "#94a3b8",
+                        }}
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              ) : (
-                <div
-                  className="h-20 flex flex-col items-center justify-center"
-                  style={{ borderTop: "1px solid rgba(0,200,255,0.08)" }}
-                >
-                  <ImageIcon size={16} style={{ color: "rgba(0,200,255,0.2)" }} className="mb-1" />
-                  <span className="text-xs text-muted-foreground opacity-50">Photos coming soon</span>
-                </div>
-              )}
-            </motion.div>
-          ))}
+
+                {/* Gallery strip */}
+                {hasGallery ? (
+                  <div
+                    onClick={() => openGallery(h.title)}
+                    className="cursor-pointer relative overflow-hidden group/gallery"
+                    style={{ height: "120px", borderTop: "1px solid rgba(0,200,255,0.1)" }}
+                  >
+                    <div className="absolute inset-0 flex">
+                      {photos.slice(0, 4).map((photo, i) => (
+                        <div key={i} className="flex-1 overflow-hidden">
+                          <img
+                            src={photo.src}
+                            alt={photo.label}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover/gallery:scale-105"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <div
+                      className="absolute inset-0 flex flex-col items-center justify-center transition-all duration-300"
+                      style={{ background: "rgba(5,8,22,0.55)", backdropFilter: "blur(2px)" }}
+                    >
+                      <div
+                        className="p-2.5 rounded-full mb-1.5 transition-transform duration-300 group-hover/gallery:scale-110"
+                        style={{
+                          background: "rgba(0,200,255,0.15)",
+                          border: "1px solid rgba(0,200,255,0.35)",
+                          color: "#00C8FF",
+                        }}
+                      >
+                        <ImageIcon size={18} />
+                      </div>
+                      <span
+                        className="text-xs font-semibold"
+                        style={{ color: "#00C8FF", textShadow: "0 0 8px rgba(0,200,255,0.4)" }}
+                      >
+                        View {photos.length} Photos
+                      </span>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className="h-20 flex flex-col items-center justify-center"
+                    style={{ borderTop: "1px solid rgba(0,200,255,0.08)" }}
+                  >
+                    <ImageIcon size={16} style={{ color: "rgba(0,200,255,0.2)" }} className="mb-1" />
+                    <span className="text-xs text-muted-foreground opacity-50">Photos coming soon</span>
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 
       {/* Full-screen gallery modal */}
       <AnimatePresence>
-        {galleryOpen && (
+        {activeGallery && gallery.length > 0 && (
           <>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setGalleryOpen(false)}
+              onClick={closeGallery}
               className="fixed inset-0 z-50"
               style={{ background: "rgba(5,8,22,0.95)", backdropFilter: "blur(12px)" }}
             />
@@ -229,12 +251,12 @@ export function Hackathons() {
                 style={{ borderBottom: "1px solid rgba(0,200,255,0.1)" }}
               >
                 <div>
-                  <h3 className="font-bold text-white">Hack'O'Clock 2026 Gallery</h3>
+                  <h3 className="font-bold text-white">{activeGallery} Gallery</h3>
                   <p className="text-xs text-muted-foreground mt-0.5">
-                    {currentPhoto + 1} / {HACKATHON_GALLERY.length} — {HACKATHON_GALLERY[currentPhoto].label}
+                    {currentPhoto + 1} / {gallery.length} — {gallery[currentPhoto]?.label}
                   </p>
                 </div>
-                <Button variant="ghost" size="icon" onClick={() => setGalleryOpen(false)} style={{ color: "#94a3b8" }}>
+                <Button variant="ghost" size="icon" onClick={closeGallery} style={{ color: "#94a3b8" }}>
                   <X className="h-5 w-5" />
                 </Button>
               </div>
@@ -244,8 +266,8 @@ export function Hackathons() {
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={currentPhoto}
-                    src={HACKATHON_GALLERY[currentPhoto].src}
-                    alt={HACKATHON_GALLERY[currentPhoto].label}
+                    src={gallery[currentPhoto]?.src}
+                    alt={gallery[currentPhoto]?.label}
                     className="max-w-full max-h-[55vh] object-contain"
                     initial={{ opacity: 0, scale: 1.04 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -254,7 +276,6 @@ export function Hackathons() {
                   />
                 </AnimatePresence>
 
-                {/* Arrow nav */}
                 <button
                   onClick={prevPhoto}
                   className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
@@ -276,7 +297,7 @@ export function Hackathons() {
                 className="flex gap-2 overflow-x-auto px-4 py-3 shrink-0"
                 style={{ borderTop: "1px solid rgba(0,200,255,0.1)" }}
               >
-                {HACKATHON_GALLERY.map((photo, i) => (
+                {gallery.map((photo, i) => (
                   <button
                     key={i}
                     onClick={() => setCurrentPhoto(i)}
@@ -284,9 +305,7 @@ export function Hackathons() {
                     style={{
                       width: "72px",
                       height: "54px",
-                      border: i === currentPhoto
-                        ? "2px solid #00C8FF"
-                        : "2px solid rgba(0,200,255,0.1)",
+                      border: i === currentPhoto ? "2px solid #00C8FF" : "2px solid rgba(0,200,255,0.1)",
                       boxShadow: i === currentPhoto ? "0 0 12px rgba(0,200,255,0.4)" : "none",
                       opacity: i === currentPhoto ? 1 : 0.55,
                     }}
