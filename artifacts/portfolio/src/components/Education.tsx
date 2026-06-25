@@ -6,14 +6,14 @@ const EDUCATION = [
     institution: "Jain College of Engineering and Technology (VTU)",
     duration: "2023–2027",
     degree: "Bachelor of Engineering in Computer Science and Engineering",
-    score: "CGPA: 8.39"
+    score: "CGPA: 8.39",
   },
   {
     institution: "KLE Prerana Residential College",
     duration: "2021–2023",
     degree: "Higher Secondary Education (PUC)",
-    score: "Percentage: 91.7%"
-  }
+    score: "Percentage: 91.7%",
+  },
 ];
 
 export function Education() {
@@ -21,18 +21,34 @@ export function Education() {
     <section id="education" className="py-24 relative w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold"
           >
-            Academic <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Education</span>
+            Academic{" "}
+            <span
+              style={{
+                background: "linear-gradient(90deg, #00C8FF, #6EE7FF)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Education
+            </span>
           </motion.h2>
         </div>
 
         <div className="max-w-3xl mx-auto relative">
-          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-border/50"></div>
+          {/* Vertical timeline line */}
+          <div
+            className="absolute left-6 md:left-8 top-0 bottom-0 w-px"
+            style={{
+              background: "linear-gradient(to bottom, transparent, rgba(0,200,255,0.3), rgba(0,200,255,0.3), transparent)",
+            }}
+          />
 
           <div className="space-y-12 relative">
             {EDUCATION.map((edu, index) => (
@@ -44,23 +60,50 @@ export function Education() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="relative pl-16 md:pl-24"
               >
-                <div className="absolute left-0 md:left-2 transform w-12 h-12 bg-card border border-primary rounded-full flex items-center justify-center z-10 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                  <GraduationCap size={20} className="text-primary" />
+                {/* Timeline icon dot */}
+                <div
+                  className="absolute left-0 md:left-2 w-12 h-12 rounded-full flex items-center justify-center z-10"
+                  style={{
+                    background: "rgba(9,18,33,0.9)",
+                    border: "2px solid #00C8FF",
+                    boxShadow: "0 0 16px rgba(0,200,255,0.35)",
+                  }}
+                >
+                  <GraduationCap size={20} style={{ color: "#00C8FF" }} />
                 </div>
 
-                <div className="bg-card/40 backdrop-blur-md border border-border/50 rounded-2xl p-6 md:p-8 hover:border-primary/30 transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] group">
+                <div
+                  className="glass-card rounded-2xl p-6 md:p-8 group"
+                  data-testid={`card-education-${index}`}
+                >
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{edu.degree}</h3>
-                      <p className="text-lg text-muted-foreground mt-1">{edu.institution}</p>
+                      <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-muted-foreground mt-1">{edu.institution}</p>
                     </div>
-                    <div className="inline-flex px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full border border-primary/20 whitespace-nowrap">
+                    <span
+                      className="inline-flex px-3 py-1 text-sm font-medium rounded-full whitespace-nowrap shrink-0"
+                      style={{
+                        background: "rgba(0,200,255,0.08)",
+                        border: "1px solid rgba(0,200,255,0.2)",
+                        color: "#00C8FF",
+                      }}
+                    >
                       {edu.duration}
-                    </div>
+                    </span>
                   </div>
-                  <p className="inline-flex font-mono text-accent font-semibold px-4 py-2 bg-accent/10 rounded-lg">
+                  <span
+                    className="inline-flex font-mono font-semibold px-4 py-2 rounded-lg text-sm"
+                    style={{
+                      background: "rgba(0,200,255,0.06)",
+                      border: "1px solid rgba(0,200,255,0.15)",
+                      color: "#35D6FF",
+                    }}
+                  >
                     {edu.score}
-                  </p>
+                  </span>
                 </div>
               </motion.div>
             ))}

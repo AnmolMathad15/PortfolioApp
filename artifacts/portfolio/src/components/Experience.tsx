@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, Building2, ExternalLink } from "lucide-react";
+import { Briefcase, ExternalLink } from "lucide-react";
 
 const EXPERIENCES = [
   {
@@ -14,7 +14,7 @@ const EXPERIENCES = [
       "Testing APIs with Postman and managing MySQL databases.",
     ],
     link: "https://www.studyecart.in",
-    logoText: "SE"
+    logoText: "SE",
   },
   {
     title: "Frontend AI Engineer",
@@ -28,8 +28,8 @@ const EXPERIENCES = [
       "Improved user experience through modern UI/UX practices and component optimization.",
     ],
     link: "https://flyrank.ai",
-    logoText: "FR"
-  }
+    logoText: "FR",
+  },
 ];
 
 export function Experience() {
@@ -37,19 +37,35 @@ export function Experience() {
     <section id="experience" className="py-24 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold"
           >
-            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Experience</span>
+            Professional{" "}
+            <span
+              style={{
+                background: "linear-gradient(90deg, #00C8FF, #6EE7FF)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Experience
+            </span>
           </motion.h2>
         </div>
 
         <div className="max-w-4xl mx-auto relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border/50 transform md:-translate-x-1/2 hidden md:block"></div>
+          <div
+            className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px hidden md:block"
+            style={{
+              background: "linear-gradient(to bottom, transparent, rgba(0,200,255,0.3), rgba(0,200,255,0.3), transparent)",
+              transform: "translateX(-50%)",
+            }}
+          />
 
           <div className="space-y-12 relative">
             {EXPERIENCES.map((exp, index) => (
@@ -59,47 +75,69 @@ export function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className={`flex flex-col md:flex-row gap-8 items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                className={`flex flex-col md:flex-row gap-8 items-center ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
               >
                 {/* Timeline dot */}
-                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-card border-2 border-primary rounded-full items-center justify-center z-10 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-                  <Briefcase size={20} className="text-primary" />
+                <div
+                  className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full items-center justify-center z-10"
+                  style={{
+                    background: "rgba(9,18,33,0.9)",
+                    border: "2px solid #00C8FF",
+                    boxShadow: "0 0 20px rgba(0,200,255,0.4)",
+                  }}
+                >
+                  <Briefcase size={20} style={{ color: "#00C8FF" }} />
                 </div>
 
-                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pl-12' : 'md:pr-12'}`}>
-                  <div className="bg-card/40 backdrop-blur-md border border-border/50 rounded-2xl p-6 md:p-8 hover:border-primary/30 transition-colors relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                      <Building2 size={80} />
-                    </div>
-
+                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:pl-12" : "md:pr-12"}`}>
+                  <div
+                    className="glass-card rounded-2xl p-6 md:p-8 group relative overflow-hidden"
+                    data-testid={`card-experience-${index}`}
+                  >
+                    <div
+                      className="absolute top-0 right-0 w-40 h-40 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      style={{
+                        background: "radial-gradient(circle, rgba(0,200,255,0.05) 0%, transparent 70%)",
+                        transform: "translate(30%, -30%)",
+                      }}
+                    />
                     <div className="relative z-10">
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border border-border/50 flex items-center justify-center font-bold text-lg">
+                        <div
+                          className="w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg shrink-0"
+                          style={{
+                            background: "linear-gradient(135deg, rgba(0,200,255,0.15), rgba(0,200,255,0.05))",
+                            border: "1px solid rgba(0,200,255,0.2)",
+                            color: "#00C8FF",
+                          }}
+                        >
                           {exp.logoText}
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
-                          <a 
-                            href={exp.link} 
-                            target="_blank" 
+                          <h3 className="text-xl font-bold text-white">{exp.title}</h3>
+                          <a
+                            href={exp.link}
+                            target="_blank"
                             rel="noopener noreferrer"
-                            className="text-primary hover:text-primary/80 flex items-center gap-1 text-sm font-medium transition-colors"
+                            className="flex items-center gap-1 text-sm font-medium transition-colors"
+                            style={{ color: "#00C8FF" }}
+                            data-testid={`link-company-${index}`}
                           >
                             {exp.company} <ExternalLink size={12} />
                           </a>
                         </div>
                       </div>
 
-                      <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground mb-6 font-mono">
+                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground mb-6 font-mono">
                         <span>{exp.duration}</span>
-                        <span className="hidden sm:inline">•</span>
+                        <span className="hidden sm:inline opacity-40">•</span>
                         <span>{exp.location}</span>
                       </div>
 
                       <ul className="space-y-3 mb-6">
                         {exp.responsibilities.map((resp, i) => (
                           <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">
-                            <span className="text-primary mt-1 shrink-0">▹</span>
+                            <span className="mt-1 shrink-0" style={{ color: "#00C8FF" }}>▹</span>
                             <span className="leading-relaxed">{resp}</span>
                           </li>
                         ))}
@@ -107,7 +145,15 @@ export function Experience() {
 
                       <div className="flex flex-wrap gap-2">
                         {exp.tech.map((t, i) => (
-                          <span key={i} className="text-xs px-2.5 py-1 bg-background/50 border border-border/50 rounded-md text-muted-foreground">
+                          <span
+                            key={i}
+                            className="text-xs px-2.5 py-1 rounded-md"
+                            style={{
+                              background: "rgba(0,200,255,0.05)",
+                              border: "1px solid rgba(0,200,255,0.12)",
+                              color: "#94a3b8",
+                            }}
+                          >
                             {t}
                           </span>
                         ))}

@@ -1,25 +1,42 @@
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, Instagram, Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export function Contact() {
   return (
     <section id="contact" className="py-24 relative w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto bg-card/30 backdrop-blur-xl border border-border/50 rounded-3xl p-8 md:p-16 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3 pointer-events-none"></div>
+        <div
+          className="max-w-4xl mx-auto glass-card-glow rounded-3xl p-8 md:p-16 relative overflow-hidden"
+        >
+          {/* Glow orbs */}
+          <div
+            className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none"
+            style={{
+              background: "radial-gradient(circle, rgba(0,200,255,0.08) 0%, transparent 70%)",
+              transform: "translate(30%, -30%)",
+            }}
+          />
+          <div
+            className="absolute bottom-0 left-0 w-64 h-64 rounded-full pointer-events-none"
+            style={{
+              background: "radial-gradient(circle, rgba(0,200,255,0.05) 0%, transparent 70%)",
+              transform: "translate(-30%, 30%)",
+            }}
+          />
 
-          <div className="relative z-10 text-center space-y-6 mb-12">
-            <motion.h2 
+          <div className="relative z-10 text-center space-y-4 mb-12">
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold"
+              className="text-4xl md:text-5xl font-bold text-white"
             >
-              Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Connect</span>
+              Let's{" "}
+              <span style={{ background: "linear-gradient(90deg, #00C8FF, #6EE7FF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                Connect
+              </span>
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -30,12 +47,12 @@ export function Contact() {
             </motion.p>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12"
           >
             {[
               { icon: Mail, label: "Email", value: "anmolmathad@gmail.com", href: "mailto:anmolmathad@gmail.com" },
@@ -43,39 +60,89 @@ export function Contact() {
               { icon: Github, label: "GitHub", value: "github.com/AnmolMathad15", href: "https://github.com/AnmolMathad15" },
               { icon: Instagram, label: "Instagram", value: "@anmol_mathad_15", href: "https://instagram.com/anmol_mathad_15" },
             ].map((contact, i) => (
-              <a 
-                key={i} 
+              <a
+                key={i}
                 href={contact.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-background/50 rounded-xl border border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all group"
+                className="flex items-center gap-4 p-4 rounded-xl transition-all group"
+                style={{
+                  background: "rgba(9,18,33,0.6)",
+                  border: "1px solid rgba(0,200,255,0.1)",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(0,200,255,0.28)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(0,200,255,0.08)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(0,200,255,0.1)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                }}
+                data-testid={`link-contact-${contact.label.toLowerCase()}`}
               >
-                <div className="p-3 bg-card rounded-lg border border-border/50 group-hover:bg-primary/20 group-hover:text-primary transition-colors">
+                <div
+                  className="p-3 rounded-lg shrink-0 transition-all duration-300 group-hover:scale-110"
+                  style={{
+                    background: "rgba(0,200,255,0.08)",
+                    border: "1px solid rgba(0,200,255,0.15)",
+                    color: "#00C8FF",
+                  }}
+                >
                   <contact.icon size={20} />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">{contact.label}</p>
-                  <p className="text-foreground font-medium">{contact.value}</p>
+                  <p
+                    className="text-xs font-semibold uppercase tracking-wider mb-0.5"
+                    style={{ color: "rgba(0,200,255,0.5)" }}
+                  >
+                    {contact.label}
+                  </p>
+                  <p className="text-white font-medium text-sm group-hover:text-primary transition-colors">
+                    {contact.value}
+                  </p>
                 </div>
               </a>
             ))}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground gap-2 rounded-full px-8 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+            <button
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 rounded-full font-semibold transition-all neon-btn-glow"
+              style={{
+                background: "linear-gradient(135deg, #00C8FF, #35D6FF)",
+                color: "#050816",
+                border: "none",
+              }}
+              data-testid="button-download-resume"
+            >
               <Download size={18} /> Download Resume
-            </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto gap-2 rounded-full px-8 border-primary/50 hover:bg-primary/10" asChild>
-              <a href="mailto:anmolmathad@gmail.com">
-                <Mail size={18} /> Send Email
-              </a>
-            </Button>
+            </button>
+            <a
+              href="mailto:anmolmathad@gmail.com"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 rounded-full font-semibold transition-all"
+              style={{
+                background: "rgba(0,200,255,0.06)",
+                border: "1px solid rgba(0,200,255,0.3)",
+                color: "#00C8FF",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(0,200,255,0.12)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 0 16px rgba(0,200,255,0.2)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(0,200,255,0.06)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "none";
+              }}
+              data-testid="button-send-email"
+            >
+              <Mail size={18} /> Send Email
+            </a>
           </motion.div>
         </div>
       </div>
