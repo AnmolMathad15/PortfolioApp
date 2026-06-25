@@ -17,6 +17,12 @@ import resolveComplaints from "@assets/Screenshot_2026-06-25_174922_178239011834
 import resolveAnalyze from "@assets/Screenshot_2026-06-25_175009_1782390118347.png";
 import resolveDashboard from "@assets/Screenshot_2026-06-25_175045_1782390101136.png";
 
+import neuroHero from "@assets/Screenshot_2026-06-25_175426_1782390450960.png";
+import neuroFeatures from "@assets/Screenshot_2026-06-25_175448_1782390450959.png";
+import neuroHowItWorks from "@assets/Screenshot_2026-06-25_175509_1782390450958.png";
+import neuroLiveDetection from "@assets/Screenshot_2026-06-25_175554_1782390450956.png";
+import neuroDashboard from "@assets/Screenshot_2026-06-25_175651_1782390450955.png";
+
 const PROJECTS = [
   {
     title: "NextStop JGI",
@@ -43,13 +49,13 @@ const PROJECTS = [
   {
     title: "NeuroVisionAI",
     subtitle: "Real-Time Object Detection System",
-    tech: ["Python", "PyTorch", "YOLOv8"],
+    tech: ["Python", "PyTorch", "YOLOv8", "React", "FastAPI"],
     description: "Developed a real-time object detection system trained using the COCO dataset on Google Colab GPU.",
-    fullDescription: "A highly optimized computer vision pipeline capable of detecting over 80 classes of objects in real-time video streams. The model was fine-tuned using PyTorch and YOLOv8 architecture, achieving high mAP scores while maintaining inference speeds suitable for edge deployment.",
-    images: [],
-    imageLabels: [],
+    fullDescription: "NeuroVisionAI is a full-stack AI vision platform powered by YOLOv8m and PyTorch. It streams live camera feed through the browser, detects 80+ object classes in real time with bounding boxes and confidence scores, and announces detected objects via context-aware voice feedback. Features a live dashboard with AI logs, FPS tracking, latency metrics, and smart alerts designed for accessibility — empowering visually impaired users with real-time environmental awareness.",
+    images: [neuroHero, neuroFeatures, neuroHowItWorks, neuroLiveDetection, neuroDashboard],
+    imageLabels: ["Hero", "Features", "How It Works", "Live Detection", "Dashboard"],
     link: "#",
-    github: "#",
+    github: "https://github.com/AnmolMathad15/NeuroVisionAI",
   },
   {
     title: "JCET Hub",
