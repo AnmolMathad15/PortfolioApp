@@ -97,48 +97,52 @@
 
 /* LIGHT MODE */
 :root {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
+  --button-outline: rgba(0,200,255, .15);
+  --badge-outline: rgba(0,200,255, .08);
 
   --opaque-button-border-intensity: -8;
 
-  --elevate-1: rgba(255,255,255, .03);
-  --elevate-2: rgba(255,255,255, .08);
+  --elevate-1: rgba(0,200,255, .04);
+  --elevate-2: rgba(0,200,255, .09);
 
-  --background: 228 88% 4%;
+  --background: 230 63% 5%;
   --foreground: 0 0% 100%;
-  --card: 222 50% 8%;
+  --card: 220 57% 8%;
   --card-foreground: 0 0% 100%;
-  --card-border: 217 55% 15%;
-  --border: 217 55% 15%;
-  --input: 217 55% 15%;
-  --ring: 217 91% 60%;
-  --primary: 217 91% 60%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 222 50% 8%;
-  --secondary-foreground: 213 27% 73%;
-  --muted: 222 50% 10%;
-  --muted-foreground: 213 27% 73%;
-  --accent: 263 70% 58%;
-  --accent-foreground: 0 0% 100%;
+  --card-border: 193 100% 50% / 0.15;
+  --border: 193 80% 30% / 0.25;
+  --input: 220 57% 10%;
+  --ring: 193 100% 50%;
+  --primary: 193 100% 50%;
+  --primary-foreground: 230 63% 5%;
+  --secondary: 220 57% 8%;
+  --secondary-foreground: 193 30% 70%;
+  --muted: 220 57% 10%;
+  --muted-foreground: 210 20% 60%;
+  --accent: 193 100% 65%;
+  --accent-foreground: 230 63% 5%;
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 100%;
-  --popover: 222 50% 8%;
+  --popover: 220 57% 8%;
   --popover-foreground: 0 0% 100%;
-  --popover-border: 217 55% 15%;
-  --sidebar: 222 50% 8%;
+  --popover-border: 193 100% 50% / 0.15;
+  --sidebar: 220 57% 8%;
   --sidebar-foreground: 0 0% 100%;
-  --sidebar-border: 217 55% 15%;
-  --sidebar-primary: 217 91% 60%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 263 70% 58%;
-  --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-ring: 217 91% 60%;
-  --chart-1: 217 91% 60%;
-  --chart-2: 263 70% 58%;
-  --chart-3: 213 27% 73%;
-  --chart-4: 160 60% 45%;
+  --sidebar-border: 193 80% 30% / 0.25;
+  --sidebar-primary: 193 100% 50%;
+  --sidebar-primary-foreground: 230 63% 5%;
+  --sidebar-accent: 193 100% 65%;
+  --sidebar-accent-foreground: 230 63% 5%;
+  --sidebar-ring: 193 100% 50%;
+  --chart-1: 193 100% 50%;
+  --chart-2: 193 100% 65%;
+  --chart-3: 210 20% 60%;
+  --chart-4: 160 80% 45%;
   --chart-5: 35 91% 60%;
+  --neon: #00C8FF;
+  --neon-glow: #00B8FF;
+  --neon-bright: #35D6FF;
+  --neon-pale: #6EE7FF;
 
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: Georgia, serif;
@@ -166,48 +170,104 @@
 }
 
 .dark {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
+  --button-outline: rgba(0,200,255, .15);
+  --badge-outline: rgba(0,200,255, .08);
 
   --opaque-button-border-intensity: 9;
 
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
+  --elevate-1: rgba(0,200,255, .04);
+  --elevate-2: rgba(0,200,255, .09);
 
-  --background: 228 88% 4%;
+  --background: 230 63% 5%;
   --foreground: 0 0% 100%;
-  --card: 222 50% 8%;
+  --card: 220 57% 8%;
   --card-foreground: 0 0% 100%;
-  --card-border: 217 55% 15%;
-  --border: 217 55% 15%;
-  --input: 217 55% 15%;
-  --ring: 217 91% 60%;
-  --primary: 217 91% 60%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 222 50% 8%;
-  --secondary-foreground: 213 27% 73%;
-  --muted: 222 50% 10%;
-  --muted-foreground: 213 27% 73%;
-  --accent: 263 70% 58%;
-  --accent-foreground: 0 0% 100%;
+  --card-border: 193 100% 50% / 0.15;
+  --border: 193 80% 30% / 0.25;
+  --input: 220 57% 10%;
+  --ring: 193 100% 50%;
+  --primary: 193 100% 50%;
+  --primary-foreground: 230 63% 5%;
+  --secondary: 220 57% 8%;
+  --secondary-foreground: 193 30% 70%;
+  --muted: 220 57% 10%;
+  --muted-foreground: 210 20% 60%;
+  --accent: 193 100% 65%;
+  --accent-foreground: 230 63% 5%;
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 100%;
-  --popover: 222 50% 8%;
+  --popover: 220 57% 8%;
   --popover-foreground: 0 0% 100%;
-  --popover-border: 217 55% 15%;
-  --sidebar: 222 50% 8%;
+  --popover-border: 193 100% 50% / 0.15;
+  --sidebar: 220 57% 8%;
   --sidebar-foreground: 0 0% 100%;
-  --sidebar-border: 217 55% 15%;
-  --sidebar-primary: 217 91% 60%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 263 70% 58%;
-  --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-ring: 217 91% 60%;
-  --chart-1: 217 91% 60%;
-  --chart-2: 263 70% 58%;
-  --chart-3: 213 27% 73%;
-  --chart-4: 160 60% 45%;
+  --sidebar-border: 193 80% 30% / 0.25;
+  --sidebar-primary: 193 100% 50%;
+  --sidebar-primary-foreground: 230 63% 5%;
+  --sidebar-accent: 193 100% 65%;
+  --sidebar-accent-foreground: 230 63% 5%;
+  --sidebar-ring: 193 100% 50%;
+  --chart-1: 193 100% 50%;
+  --chart-2: 193 100% 65%;
+  --chart-3: 210 20% 60%;
+  --chart-4: 160 80% 45%;
   --chart-5: 35 91% 60%;
+}
+
+/* ====== NEUROVISION NEON SYSTEM ====== */
+
+/* Dot grid background */
+.neon-grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 200, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Animated neon border */
+@keyframes neon-border-spin {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.neon-border-animated {
+  position: relative;
+}
+.neon-border-animated::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg, #00C8FF, #35D6FF, #00B8FF, #6EE7FF, #00C8FF);
+  background-size: 300% 300%;
+  animation: neon-border-spin 4s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Neon glow text */
+.neon-text {
+  color: #00C8FF;
+  text-shadow: 0 0 10px rgba(0,200,255,0.8), 0 0 20px rgba(0,200,255,0.5), 0 0 40px rgba(0,200,255,0.3);
+}
+
+/* Neon glow box */
+.neon-glow {
+  box-shadow: 0 0 15px rgba(0,200,255,0.3), 0 0 30px rgba(0,200,255,0.15), inset 0 0 15px rgba(0,200,255,0.05);
+}
+
+/* Neon button glow */
+.neon-btn-glow {
+  box-shadow: 0 0 20px rgba(0,200,255,0.5), 0 0 40px rgba(0,200,255,0.25);
+  transition: box-shadow 0.3s ease;
+}
+.neon-btn-glow:hover {
+  box-shadow: 0 0 30px rgba(0,200,255,0.8), 0 0 60px rgba(0,200,255,0.4);
 }
 
 @layer base {

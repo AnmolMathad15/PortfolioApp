@@ -39,9 +39,9 @@ export function Contact() {
           >
             {[
               { icon: Mail, label: "Email", value: "anmolmathad@gmail.com", href: "mailto:anmolmathad@gmail.com" },
-              { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/anmolmathad", href: "https://linkedin.com/in/anmolmathad" },
-              { icon: Github, label: "GitHub", value: "github.com/anmol-mathad", href: "https://github.com/anmol-mathad" },
-              { icon: Instagram, label: "Instagram", value: "@life_of_anmol", href: "https://instagram.com/life_of_anmol" },
+              { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/anmol-mathad", href: "https://www.linkedin.com/in/anmol-mathad-99a90b282" },
+              { icon: Github, label: "GitHub", value: "github.com/AnmolMathad15", href: "https://github.com/AnmolMathad15" },
+              { icon: Instagram, label: "Instagram", value: "@anmol_mathad_15", href: "https://instagram.com/anmol_mathad_15" },
             ].map((contact, i) => (
               <a 
                 key={i} 

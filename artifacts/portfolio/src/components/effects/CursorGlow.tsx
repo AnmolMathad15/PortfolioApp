@@ -17,7 +17,7 @@ export function CursorGlow() {
     <motion.div
       className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
       animate={{
-        background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.05), transparent 40%)`,
+        background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(0, 200, 255, 0.07), transparent 40%)`,
       }}
     />
   );

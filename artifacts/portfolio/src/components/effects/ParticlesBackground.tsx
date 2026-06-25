@@ -38,7 +38,9 @@ export function ParticlesBackground() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       particles.forEach((p) => {
-        ctx.fillStyle = `rgba(96, 165, 250, ${p.opacity})`;
+        const colors = ["0,200,255", "0,184,255", "53,214,255", "110,231,255"];
+        const color = colors[Math.floor(p.x / canvas.width * colors.length)];
+        ctx.fillStyle = `rgba(${color}, ${p.opacity})`;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fill();

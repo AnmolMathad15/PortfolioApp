@@ -93,9 +93,9 @@ export function Hero() {
             
             <div className="flex gap-4 pt-6">
               {[
-                { icon: FaGithub, href: "https://github.com/anmol-mathad" },
-                { icon: FaLinkedin, href: "https://linkedin.com/in/anmolmathad" },
-                { icon: FaInstagram, href: "https://instagram.com/life_of_anmol" },
+                { icon: FaGithub, href: "https://github.com/AnmolMathad15" },
+                { icon: FaLinkedin, href: "https://www.linkedin.com/in/anmol-mathad-99a90b282" },
+                { icon: FaInstagram, href: "https://instagram.com/anmol_mathad_15" },
                 { icon: FaEnvelope, href: "mailto:anmolmathad@gmail.com" },
               ].map((social, index) => (
                 <motion.a

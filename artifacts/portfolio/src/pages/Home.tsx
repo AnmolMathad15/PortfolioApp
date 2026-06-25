@@ -53,7 +53,7 @@ function BackToTop() {
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/30">
+    <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/30 neon-grid-bg">
       <LoadingScreen />
       <CursorGlow />
       <ScrollProgress />
