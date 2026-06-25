@@ -23,6 +23,23 @@ import neuroHowItWorks from "@assets/Screenshot_2026-06-25_175509_1782390450958.
 import neuroLiveDetection from "@assets/Screenshot_2026-06-25_175554_1782390450956.png";
 import neuroDashboard from "@assets/Screenshot_2026-06-25_175651_1782390450955.png";
 
+import jcetLogin from "@assets/Screenshot_2026-06-25_180403_1782391116003.png";
+import jcetOverview from "@assets/Screenshot_2026-06-25_180422_1782391116002.png";
+import jcetAttendance from "@assets/Screenshot_2026-06-25_180435_1782391116001.png";
+import jcetTimetable from "@assets/Screenshot_2026-06-25_180457_1782391116001.png";
+import jcetCalendar from "@assets/Screenshot_2026-06-25_180512_1782391116000.png";
+import jcetMarks from "@assets/Screenshot_2026-06-25_180527_1782391115999.png";
+import jcetExam from "@assets/Screenshot_2026-06-25_180540_1782391115999.png";
+import jcetResults from "@assets/Screenshot_2026-06-25_180554_1782391115998.png";
+import jcetLms from "@assets/Screenshot_2026-06-25_180613_1782391115996.png";
+import jcetNotes from "@assets/Screenshot_2026-06-25_180629_1782391115995.png";
+import jcetAssignments from "@assets/Screenshot_2026-06-25_180646_1782391115993.png";
+import jcetEventsHub from "@assets/Screenshot_2026-06-25_180702_1782391115992.png";
+import jcetEvents from "@assets/Screenshot_2026-06-25_180720_1782391115990.png";
+import jcetMentoring from "@assets/Screenshot_2026-06-25_180735_1782391115988.png";
+import jcetFees from "@assets/Screenshot_2026-06-25_180751_1782391115987.png";
+import jcetFeedback from "@assets/Screenshot_2026-06-25_180807_1782391115986.png";
+
 const PROJECTS = [
   {
     title: "NextStop JGI",
@@ -60,13 +77,13 @@ const PROJECTS = [
   {
     title: "JCET Hub",
     subtitle: "Smart Campus Management Platform",
-    tech: ["Node.js", "Express.js", "PostgreSQL", "WebSockets"],
+    tech: ["Node.js", "Express.js", "PostgreSQL", "React", "WebSockets"],
     description: "Built a smart campus platform with attendance management, event handling and role-based dashboards.",
-    fullDescription: "A centralized hub for campus operations. Features include real-time attendance tracking via QR codes, an event management system with ticketing, and specialized dashboards for faculty and students. The backend is built on a robust PostgreSQL schema with Express.js handling REST APIs and WebSockets for live notifications.",
-    images: [],
-    imageLabels: [],
+    fullDescription: "JCET Hub is a full-featured smart campus portal for Jain College of Engineering and Technology. It consolidates every campus service into one platform: attendance tracking with danger/safe thresholds, class timetables, academic calendar, internal assessment marks, exam schedules, VTU results & CGPA tracker, LMS dashboard with course-wise progress, study notes, assignments, a Campus Events Hub with XP points & leaderboard, faculty mentoring sessions, fee payment tracker, and anonymous feedback — all behind role-based login for students, faculty, and admins.",
+    images: [jcetLogin, jcetOverview, jcetAttendance, jcetTimetable, jcetCalendar, jcetMarks, jcetExam, jcetResults, jcetLms, jcetNotes, jcetAssignments, jcetEventsHub, jcetEvents, jcetMentoring, jcetFees, jcetFeedback],
+    imageLabels: ["Login", "Overview", "Attendance", "Timetable", "Academic Calendar", "Internal Assessment", "Exam Schedule", "Semester Results", "LMS Dashboard", "App Notes", "Assignments", "Events Hub", "Events", "Mentoring", "Fees", "Feedback"],
     link: "#",
-    github: "#",
+    github: "https://github.com/AnmolMathad15/JCET_HUB",
   },
   {
     title: "CodeInsight",
