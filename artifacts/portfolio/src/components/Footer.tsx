@@ -6,31 +6,31 @@ export function Footer() {
       {/* Marquee */}
       <div className="w-full border-b border-border/50 bg-primary/5 py-4 overflow-hidden flex relative whitespace-nowrap">
         <div className="animate-marquee inline-flex gap-8 text-primary/80 font-bold uppercase tracking-widest text-sm md:text-base opacity-70">
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
         </div>
         <div className="absolute top-0 animate-marquee2 inline-flex gap-8 text-primary/80 font-bold uppercase tracking-widest text-sm md:text-base opacity-70" aria-hidden="true">
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
-          <span>Let's build something amazing together</span>
+          <span>Let's connect and build something meaningful together</span>
           <span>•</span>
         </div>
       </div>
