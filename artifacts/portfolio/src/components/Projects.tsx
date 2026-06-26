@@ -40,6 +40,14 @@ import jcetMentoring from "@assets/Screenshot_2026-06-25_180735_1782391115988.pn
 import jcetFees from "@assets/Screenshot_2026-06-25_180751_1782391115987.png";
 import jcetFeedback from "@assets/Screenshot_2026-06-25_180807_1782391115986.png";
 
+import ciHero from "@assets/q1_1782451419209.jpg";
+import ciLogin from "@assets/q2_1782451419208.jpg";
+import ciNewAnalysis from "@assets/q3_1782451419208.jpg";
+import ciAnalyzing from "@assets/q4_1782451419207.jpg";
+import ciIssues from "@assets/q5_1782451419206.jpg";
+import ciApplyFix from "@assets/q6_1782451419206.jpg";
+import ciFixApplied from "@assets/q7_1782451430912.jpg";
+
 const PROJECTS = [
   {
     title: "NextStop JGI",
@@ -87,14 +95,14 @@ const PROJECTS = [
   },
   {
     title: "CodeInsight",
-    subtitle: "AI Code Review Platform",
-    tech: ["JavaScript", "AI Integration"],
-    description: "Built an AI-powered code review system with AutoFix and multimodal debugging support.",
-    fullDescription: "CodeInsight acts as an automated senior developer. It analyzes pull requests, suggests optimizations, and can even automatically generate fix commits for common anti-patterns. It supports multiple languages and integrates directly into the Git workflow.",
-    images: [],
-    imageLabels: [],
+    subtitle: "AI Code Review Agent",
+    tech: ["React", "TypeScript", "FastAPI", "Python", "Claude AI", "PostgreSQL", "Redis", "Docker"],
+    description: "Built an AI-powered autonomous code review platform that analyzes GitHub repos, detects security issues, code smells, and architecture problems — then auto-applies validated fix patches.",
+    fullDescription: "CodeInsight is a full-stack AI Engineering Copilot that acts as an automated senior developer. Connect a GitHub/GitLab repo or paste a Git URL — it clones the codebase, detects languages, runs security analysis, identifies code smells and architecture issues, and generates precise fix patches. Each fix includes pre-flight checks (syntax, import safety, risk level, files affected). One click applies the patch to a sandbox workspace. Features a Health Score tracker, downloadable .patch files, and real-time analysis pipeline with progress steps. Built with Claude AI (Anthropic) + Claude Vision for multimodal understanding.",
+    images: [ciHero, ciLogin, ciNewAnalysis, ciAnalyzing, ciIssues, ciApplyFix, ciFixApplied],
+    imageLabels: ["Platform Overview", "Login", "New Analysis", "Analyzing Codebase", "Issues Detected", "Apply Fix", "Fix Applied Successfully"],
     link: "#",
-    github: "#",
+    github: "https://github.com/AnmolMathad15/CodeInsight--Code-Review-Agent-",
   },
 ];
 
