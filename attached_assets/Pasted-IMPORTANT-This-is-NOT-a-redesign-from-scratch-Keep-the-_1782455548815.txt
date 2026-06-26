@@ -1,0 +1,530 @@
+IMPORTANT:
+This is NOT a redesign from scratch.
+
+Keep the existing layout, dark theme, navigation structure, Projects section, Hackathon section, and overall portfolio architecture.
+
+Do NOT remove any existing functionality.
+
+Upgrade the portfolio to premium SaaS quality while preserving all project cards and hackathon cards exactly as they are.
+
+====================================================
+
+DESIGN GOAL
+
+Create a world-class developer portfolio similar to portfolios from engineers at Google, Microsoft, Vercel, Stripe, Framer, Linear, and GitHub.
+
+Theme:
+• Futuristic
+• Premium SaaS
+• Clean
+• Minimal
+• Blue Neon Cyber theme
+
+Primary Accent:
+#00C8FF
+
+Glow:
+#00D8FF
+
+Background:
+#050816
+
+Cards:
+#0B1220
+
+Borders:
+rgba(0,200,255,0.15)
+
+Use subtle glassmorphism.
+
+Soft blue shadows only.
+
+Avoid too many bright colors.
+
+====================================================
+
+GLOBAL IMPROVEMENTS
+
+Improve spacing throughout.
+
+Improve typography hierarchy.
+
+Improve responsiveness.
+
+Smooth scrolling.
+
+Better section spacing.
+
+Add elegant fade-in animations.
+
+Use Framer Motion.
+
+Add magnetic hover effects.
+
+Add floating particles in background.
+
+Add animated grid background.
+
+Mouse spotlight effect.
+
+Animated glowing borders.
+
+Modern loading animation.
+
+Scroll progress bar.
+
+Animated Back To Top button.
+
+====================================================
+
+HERO SECTION (Major Upgrade)
+
+Completely redesign ONLY the Hero section.
+
+Left Side:
+
+Small badge
+
+👋 Hello, I'm
+
+Large heading
+
+ANMOL MATHAD
+
+Gradient neon text.
+
+Animated typing effect:
+
+Computer Science Engineer
+
+Java Full Stack Developer
+
+UI/UX Designer
+
+AI Application Developer
+
+Frontend AI Engineer
+
+Description:
+
+I design modern digital experiences, build scalable full stack applications, create AI-powered solutions, and craft intuitive user interfaces that solve real-world problems.
+
+Buttons
+
+Explore Projects
+
+Download Resume
+
+Let's Connect
+
+Social icons:
+
+GitHub
+
+LinkedIn
+
+Instagram
+
+Email
+
+Right Side
+
+Keep circular image style.
+
+Replace current styling with
+
+Neon glowing ring
+
+Rotating outer ring
+
+Floating coding icons
+
+Laptop
+
+</>
+
+Database
+
+Figma
+
+AI
+
+Cloud
+
+Code
+
+Use subtle floating animations.
+
+DO NOT use hearts or playful filters.
+
+Keep the image professional.
+
+====================================================
+
+ABOUT SECTION
+
+Keep existing statistics:
+
+CGPA
+
+Projects
+
+Internships
+
+Hackathons
+
+Upgrade the design.
+
+Replace paragraph with:
+
+I'm Anmol Mathad, a Computer Science Engineering student passionate about Full Stack Development, Artificial Intelligence, and UI/UX Design.
+
+I enjoy transforming ideas into scalable applications with clean architecture and engaging user experiences. My interests span Java Full Stack Development, AI-powered systems, frontend engineering, and modern SaaS applications.
+
+I'm constantly exploring new technologies, contributing to projects, participating in hackathons, and improving my development skills through real-world applications.
+
+Add:
+
+Current Focus
+
+Java Full Stack
+
+Spring Boot
+
+React
+
+AI Applications
+
+System Design
+
+Open Source
+
+Add a "Currently Learning" card
+
+Docker
+
+AWS
+
+Microservices
+
+Kubernetes
+
+Redis
+
+====================================================
+
+SKILLS SECTION
+
+Keep all current technologies.
+
+Upgrade UI completely.
+
+Replace pills with
+
+Technology logos
+
+Skill cards
+
+Grouped categories
+
+Languages
+
+Frontend
+
+Backend
+
+Databases
+
+AI/ML
+
+Cloud
+
+Tools
+
+Core CS
+
+Every card should have
+
+icon
+
+title
+
+technologies
+
+hover animation
+
+glow effect
+
+====================================================
+
+DO NOT MODIFY
+
+Projects section
+
+Hackathon section
+
+Their layout
+
+Their content
+
+Their images
+
+Their animations
+
+====================================================
+
+EXPERIENCE
+
+Keep existing timeline.
+
+Upgrade cards.
+
+Add
+
+Company logo
+
+Company website
+
+Current status badge
+
+Remote badge
+
+Technology icons
+
+Achievement highlights
+
+Modern timeline animation
+
+====================================================
+
+ACHIEVEMENTS
+
+Redesign as premium cards.
+
+Add hover glow.
+
+Animated counters.
+
+Icons.
+
+====================================================
+
+CERTIFICATIONS
+
+Replace placeholders.
+
+Create elegant certificate gallery.
+
+Grid layout.
+
+Hover zoom.
+
+Click to preview certificate.
+
+Verification button.
+
+Modern lightbox.
+
+====================================================
+
+EDUCATION
+
+Upgrade timeline.
+
+Add icons.
+
+Coursework chips
+
+Relevant subjects
+
+Current CGPA badge
+
+Academic timeline animation
+
+====================================================
+
+NEW SECTION
+
+GitHub Contributions
+
+Add after Projects.
+
+Display
+
+GitHub contribution graph
+
+Repository count
+
+Contribution count
+
+Followers
+
+Top Languages
+
+Featured repositories
+
+GitHub profile button
+
+Repository cards should show
+
+description
+
+language
+
+stars
+
+last updated
+
+====================================================
+
+NEW SECTION
+
+Tech Stack Marquee
+
+Add animated scrolling logos.
+
+Java
+
+Spring Boot
+
+React
+
+TypeScript
+
+Node.js
+
+Tailwind
+
+MySQL
+
+PostgreSQL
+
+Docker
+
+Git
+
+Figma
+
+Python
+
+OpenCV
+
+YOLO
+
+MongoDB
+
+Express
+
+====================================================
+
+CONTACT SECTION
+
+Keep existing information.
+
+Replace with premium SaaS design.
+
+Use
+
+GitHub
+
+LinkedIn
+
+Instagram
+
+Email
+
+Resume
+
+Display
+
+GitHub:
+https://github.com/AnmolMathad15
+
+LinkedIn:
+https://www.linkedin.com/in/anmol-mathad-99a90b282
+
+Instagram:
+@anmol_mathad_15
+
+Email:
+anmolmathad@gmail.com
+
+Buttons
+
+Download Resume
+
+Email Me
+
+Connect on LinkedIn
+
+Visit GitHub
+
+====================================================
+
+FOOTER
+
+Animated logo.
+
+Current year.
+
+Built using
+
+React
+
+TypeScript
+
+TailwindCSS
+
+Framer Motion
+
+Vite
+
+Include
+
+Made with ❤️ by Anmol Mathad
+
+====================================================
+
+MICRO INTERACTIONS
+
+Smooth hover
+
+Blue glow
+
+Button ripple
+
+Animated icons
+
+Image hover
+
+Card elevation
+
+Section reveal
+
+====================================================
+
+PERFORMANCE
+
+Maintain 60 FPS.
+
+Optimize images.
+
+Lazy load assets.
+
+Responsive on
+
+Desktop
+
+Tablet
+
+Mobile
+
+====================================================
+
+FINAL GOAL
+
+The final portfolio should feel like a premium portfolio of a Software Engineer at Google, Microsoft, Stripe, Vercel, Linear, or GitHub.
+
+Focus on elegance, professionalism, clean typography, premium animations, and excellent user experience.
+
+DO NOT CHANGE THE PROJECTS SECTION OR HACKATHON SECTION.

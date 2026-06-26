@@ -20,7 +20,7 @@ const EXPERIENCES = [
     title: "Frontend AI Engineer",
     company: "FlyRank AI",
     location: "Remote",
-    duration: "Jan 2025 – May 2025",
+    duration: "July 2026 – August 2026",
     tech: ["React", "AI Integration", "Modern UI Systems"],
     responsibilities: [
       "Worked on AI-powered frontend experiences and modern UI systems.",
