@@ -21,6 +21,14 @@ import apbTeam from "@assets/j5_1782392102542.jpg";
 import apbCert from "@assets/j6_1782392102541.jpg";
 import apbAward from "@assets/j7_1782392102540.jpg";
 
+import haCert from "@assets/i1_1782451362250.jpg";
+import haOpening from "@assets/i2_1782451362249.jpg";
+import haLogo from "@assets/i3_1782451362249.jpg";
+import haCoding from "@assets/i4_1782451362248.jpg";
+import haTimer from "@assets/i5_1782451362248.jpg";
+import haRoom from "@assets/16_1782451362248.jpg";
+import haBadge from "@assets/i7_1782451362247.jpg";
+
 type GalleryPhoto = { src: string; label: string };
 
 const GALLERIES: Record<string, GalleryPhoto[]> = {
@@ -44,6 +52,15 @@ const GALLERIES: Record<string, GalleryPhoto[]> = {
     { src: apbCert, label: "Certificate of Participation" },
     { src: apbAward, label: "Award Ceremony — Vaibhav Fest" },
   ],
+  "HackArena 2026": [
+    { src: haLogo, label: "HackArena 2K26 — Inter-College Hackathon" },
+    { src: haBadge, label: "Participant Badge — A4 Backbenchers" },
+    { src: haOpening, label: "Opening Ceremony" },
+    { src: haRoom, label: "Hacking in Progress" },
+    { src: haTimer, label: "Countdown Timer — 6 Hours Remaining" },
+    { src: haCoding, label: "Live Coding Session" },
+    { src: haCert, label: "Certificate of Participation" },
+  ],
 };
 
 const HACKATHONS = [
@@ -63,10 +80,10 @@ const HACKATHONS = [
   },
   {
     title: "HackArena 2026",
-    organization: "Jain College of Engineering and Technology",
+    organization: "Jain College of Engineering and Technology, Hubballi",
     achievement: "Finalist Team",
-    description: "Worked on innovative ideas and competed among multiple teams. Improved technical skills.",
-    features: ["Innovation", "Technical Execution", "Teamwork"],
+    description: "Competed in HackArena 2K26, an Inter-College Hackathon organised by JCET Hubballi. Participated as team 'A4 Backbenchers', built a working project under a 6-hour countdown and made it to the Finalist round.",
+    features: ["Inter-College Competition", "6-Hour Hackathon", "Rapid Development", "Teamwork"],
   },
   {
     title: "HackFusion",
