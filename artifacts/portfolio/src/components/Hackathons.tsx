@@ -21,6 +21,10 @@ import apbTeam from "@assets/j5_1782392102542.jpg";
 import apbCert from "@assets/j6_1782392102541.jpg";
 import apbAward from "@assets/j7_1782392102540.jpg";
 
+import hfCertBadge from "@assets/a13_1782451823992.jpg";
+import hfCert from "@assets/a12_1782451823993.jpg";
+import hfTeam from "@assets/a11_1782451846997.jpg";
+
 import haCert from "@assets/i1_1782451362250.jpg";
 import haOpening from "@assets/i2_1782451362249.jpg";
 import haLogo from "@assets/i3_1782451362249.jpg";
@@ -61,6 +65,11 @@ const GALLERIES: Record<string, GalleryPhoto[]> = {
     { src: haCoding, label: "Live Coding Session" },
     { src: haCert, label: "Certificate of Participation" },
   ],
+  "HackFusion 2.0": [
+    { src: hfTeam, label: "Team Three Byte — HackFusion 2.0" },
+    { src: hfCertBadge, label: "Certificate & Participant Badge" },
+    { src: hfCert, label: "Certificate of Participation — Agratha 2K26" },
+  ],
 };
 
 const HACKATHONS = [
@@ -86,11 +95,11 @@ const HACKATHONS = [
     features: ["Inter-College Competition", "6-Hour Hackathon", "Rapid Development", "Teamwork"],
   },
   {
-    title: "HackFusion",
-    organization: "AGM College, Varur",
+    title: "HackFusion 2.0",
+    organization: "A.G.M Rural College of Engineering & Technology, Varur",
     achievement: "Participant",
-    description: "Participated in a collaborative hackathon focused on creativity, innovation, and practical problem-solving.",
-    features: ["Creativity", "Practical Solutions", "Collaboration"],
+    description: "Participated in HackFusion 2.0 (Agratha 2K26) — a 24-hour National Level Hackathon at AGM RCET, Varur. Competed as team 'Three Byte' representing JCET, Hubballi.",
+    features: ["24-Hour Hackathon", "National Level", "Team Three Byte", "Innovation"],
   },
 ];
 
