@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Instagram, Download } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram, Download, Phone } from "lucide-react";
 
 export function Contact() {
   return (
@@ -55,6 +55,7 @@ export function Contact() {
             className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12"
           >
             {[
+              { icon: Phone, label: "Phone", value: "+91 7349697599", href: "tel:+917349697599" },
               { icon: Mail, label: "Email", value: "anmolmathad@gmail.com", href: "mailto:anmolmathad@gmail.com" },
               { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/anmol-mathad", href: "https://www.linkedin.com/in/anmol-mathad-99a90b282" },
               { icon: Github, label: "GitHub", value: "github.com/AnmolMathad15", href: "https://github.com/AnmolMathad15" },
