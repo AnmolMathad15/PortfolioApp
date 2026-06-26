@@ -13,6 +13,7 @@ import { Education } from "@/components/Education";
 import { Achievements } from "@/components/Achievements";
 import { Certifications } from "@/components/Certifications";
 import { Hackathons } from "@/components/Hackathons";
+import { TechMarquee } from "@/components/TechMarquee";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { ArrowUp } from "lucide-react";
@@ -66,6 +67,7 @@ export default function Home() {
         <About />
         <Skills />
         <Projects />
+        <TechMarquee />
         <Experience />
         <Achievements />
         <Education />

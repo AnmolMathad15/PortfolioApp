@@ -86,13 +86,17 @@ export function Navbar() {
         </div>
 
         <div className="hidden lg:flex">
-          <Button
-            variant="outline"
-            className="rounded-full border-primary/50 text-primary hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all"
-            onClick={() => {}}
+          <a
+            href="/Anmol_Mathad_Resume.pdf"
+            download="Anmol_Mathad_Resume.pdf"
           >
-            Download Resume
-          </Button>
+            <Button
+              variant="outline"
+              className="rounded-full border-primary/50 text-primary hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all"
+            >
+              Download Resume
+            </Button>
+          </a>
         </div>
 
         <button
@@ -124,12 +128,14 @@ export function Navbar() {
               {item.name}
             </button>
           ))}
-          <Button
-            variant="outline"
-            className="mt-4 w-full rounded-full border-primary/50 text-primary hover:bg-primary/10"
-          >
-            Download Resume
-          </Button>
+          <a href="/Anmol_Mathad_Resume.pdf" download="Anmol_Mathad_Resume.pdf" className="w-full">
+            <Button
+              variant="outline"
+              className="mt-4 w-full rounded-full border-primary/50 text-primary hover:bg-primary/10"
+            >
+              Download Resume
+            </Button>
+          </a>
         </motion.div>
       )}
     </motion.nav>

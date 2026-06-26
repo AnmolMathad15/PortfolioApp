@@ -112,17 +112,18 @@ export function Contact() {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <button
+            <a
+              href="/Anmol_Mathad_Resume.pdf"
+              download="Anmol_Mathad_Resume.pdf"
               className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 rounded-full font-semibold transition-all neon-btn-glow"
               style={{
                 background: "linear-gradient(135deg, #00C8FF, #35D6FF)",
                 color: "#050816",
-                border: "none",
               }}
               data-testid="button-download-resume"
             >
               <Download size={18} /> Download Resume
-            </button>
+            </a>
             <a
               href="mailto:anmolmathad@gmail.com"
               className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3 rounded-full font-semibold transition-all"
