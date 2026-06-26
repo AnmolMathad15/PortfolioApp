@@ -361,6 +361,46 @@ export function Projects() {
             </motion.div>
           ))}
         </div>
+
+        {/* GitHub CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="mt-12 flex justify-center"
+        >
+          <a
+            href="https://github.com/AnmolMathad15"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full font-medium text-sm transition-all group"
+            style={{
+              background: "rgba(0,200,255,0.06)",
+              border: "1px solid rgba(0,200,255,0.2)",
+              color: "#94a3b8",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.background = "rgba(0,200,255,0.12)";
+              (e.currentTarget as HTMLElement).style.borderColor = "rgba(0,200,255,0.35)";
+              (e.currentTarget as HTMLElement).style.color = "#00C8FF";
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(0,200,255,0.15)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.background = "rgba(0,200,255,0.06)";
+              (e.currentTarget as HTMLElement).style.borderColor = "rgba(0,200,255,0.2)";
+              (e.currentTarget as HTMLElement).style.color = "#94a3b8";
+              (e.currentTarget as HTMLElement).style.boxShadow = "none";
+            }}
+          >
+            <Github size={18} style={{ color: "#00C8FF" }} />
+            <span>
+              Many more projects available on GitHub —{" "}
+              <span style={{ color: "#00C8FF" }} className="font-semibold">visit my GitHub</span>
+            </span>
+            <ExternalLink size={14} className="opacity-60 group-hover:opacity-100 transition-opacity" style={{ color: "#00C8FF" }} />
+          </a>
+        </motion.div>
       </div>
 
       {/* Modal */}
