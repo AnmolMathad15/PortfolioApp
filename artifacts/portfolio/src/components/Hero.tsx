@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
-import { Code2, Lightbulb, Laptop, LayoutTemplate } from "lucide-react";
+import { Code2, Lightbulb, Laptop, LayoutTemplate, FileText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import anmolPhoto from "@assets/WhatsApp_Image_2026-02-28_at_10.13.00_AM_1782387184550.jpeg";
 
@@ -114,6 +114,54 @@ export function Hero() {
               >
                 Let's Connect
               </Button>
+            </div>
+
+            <div className="flex flex-wrap gap-3 pt-2">
+              <a
+                href="/Anmol_Mathad_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all"
+                style={{
+                  background: "rgba(0,200,255,0.06)",
+                  border: "1px solid rgba(0,200,255,0.25)",
+                  color: "#00C8FF",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.background = "rgba(0,200,255,0.12)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 16px rgba(0,200,255,0.2)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.background = "rgba(0,200,255,0.06)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                }}
+                data-testid="button-view-resume"
+              >
+                <FileText size={16} />
+                View Resume
+              </a>
+              <a
+                href="/Anmol_Mathad_Resume.pdf"
+                download="Anmol_Mathad_Resume.pdf"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all"
+                style={{
+                  background: "rgba(0,200,255,0.06)",
+                  border: "1px solid rgba(0,200,255,0.25)",
+                  color: "#00C8FF",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.background = "rgba(0,200,255,0.12)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 16px rgba(0,200,255,0.2)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.background = "rgba(0,200,255,0.06)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                }}
+                data-testid="button-download-resume"
+              >
+                <Download size={16} />
+                Download Resume
+              </a>
             </div>
 
             <div className="flex gap-4 pt-6">
